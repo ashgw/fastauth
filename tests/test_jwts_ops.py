@@ -11,7 +11,7 @@ from fastauth.jwts.operations import (
 from fastauth.jwts.helpers import generate_secret
 from dataclasses import dataclass
 
-NOW = datetime.utcnow()
+NOW = datetime.now()
 
 
 def test_all() -> None:
