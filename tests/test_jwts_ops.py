@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-from fastauth.libtypes import FallbackSecrets
-from fastauth.jwts.operations import (
+from autheon.libtypes import FallbackSecrets
+from autheon.jwts.operations import (
     encipher_user_info,
     decipher_jwt,
     UserInfo,
@@ -8,7 +8,7 @@ from fastauth.jwts.operations import (
     ISSUER,
     SUBJECT,
 )
-from fastauth.jwts.helpers import generate_secret
+from autheon.jwts.helpers import generate_secret
 from dataclasses import dataclass
 
 NOW = datetime.now()

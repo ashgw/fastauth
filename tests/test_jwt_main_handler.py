@@ -9,16 +9,16 @@ from starlette.datastructures import Headers
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastauth.jwts.helpers import generate_secret
-from fastauth.jwts.handler import JWTHandler
-from fastauth.exceptions import JSONWebTokenTampering, WrongKeyLength
-from fastauth.const_data import CookieData
-from fastauth.utils import name_cookie
-from fastauth.cookies import Cookies
-from fastauth.jwts.operations import encipher_user_info
-from fastauth.libtypes import UserInfo, ViewableJWT, FallbackSecrets
-from fastauth.const_data import StatusCode
-from fastauth.adapters.use_response import use_response
+from autheon.jwts.helpers import generate_secret
+from autheon.jwts.handler import JWTHandler
+from autheon.exceptions import JSONWebTokenTampering, WrongKeyLength
+from autheon.const_data import CookieData
+from autheon.utils import name_cookie
+from autheon.cookies import Cookies
+from autheon.jwts.operations import encipher_user_info
+from autheon.libtypes import UserInfo, ViewableJWT, FallbackSecrets
+from autheon.const_data import StatusCode
+from autheon.adapters.use_response import use_response
 from .utils import get_method_to_patch
 
 

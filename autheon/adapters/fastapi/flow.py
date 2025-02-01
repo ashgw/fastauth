@@ -5,16 +5,16 @@ from overrides import override
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastauth.libtypes import FallbackSecrets
-from fastauth.providers.base import Provider
-from fastauth.authorize import Authorize
-from fastauth.callback import Callback
-from fastauth.signout import Signout
-from fastauth.signin import SignInCallback
-from fastauth.oauth2_baseflow import OAuth2Base
-from fastauth.jwts.handler import JWTHandler
-from fastauth.adapters.fastapi.route import FastAuthRoute
-from fastauth.csrf import CSRF
+from autheon.libtypes import FallbackSecrets
+from autheon.providers.base import Provider
+from autheon.authorize import Authorize
+from autheon.callback import Callback
+from autheon.signout import Signout
+from autheon.signin import SignInCallback
+from autheon.oauth2_baseflow import OAuth2Base
+from autheon.jwts.handler import JWTHandler
+from autheon.adapters.fastapi.route import FastAuthRoute
+from autheon.csrf import CSRF
 
 
 @final

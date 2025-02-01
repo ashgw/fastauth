@@ -5,12 +5,12 @@ from os import getenv
 
 from starlette.responses import JSONResponse
 
-from fastauth.libtypes import UserInfo, FallbackSecrets
-from fastauth.jwts.helpers import generate_secret
-from fastauth.oauth2_options import OAuthOptions
-from fastauth.providers.google.google import Google
+from autheon.libtypes import UserInfo, FallbackSecrets
+from autheon.jwts.helpers import generate_secret
+from autheon.oauth2_options import OAuthOptions
+from autheon.providers.google.google import Google
 
-from fastauth.adapters.fastapi.csrf_middleware import CSRFMitigationMiddleware
+from autheon.adapters.fastapi.csrf_middleware import CSRFMitigationMiddleware
 
 load_dotenv()
 

@@ -2,7 +2,7 @@ from typing import Literal, Union, Type
 
 from starlette.responses import RedirectResponse, JSONResponse
 
-from fastauth.adapters.fastapi.use_response import use_fastapi_response
+from autheon.adapters.fastapi.use_response import use_fastapi_response
 
 
 def use_response(

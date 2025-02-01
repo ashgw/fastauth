@@ -1,10 +1,10 @@
 from starlette.requests import Request
 from starlette.responses import RedirectResponse
 
-from fastauth.providers.base import Provider
-from fastauth.const_data import CookieData
-from fastauth.cookies import Cookies
-from fastauth.utils import gen_oauth_params
+from autheon.providers.base import Provider
+from autheon.const_data import CookieData
+from autheon.cookies import Cookies
+from autheon.utils import gen_oauth_params
 
 
 class Authorize:

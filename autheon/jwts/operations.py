@@ -4,9 +4,9 @@ from jose.exceptions import JOSEError
 from jose.jwt import ALGORITHMS
 from jose.jwe import encrypt, decrypt
 from datetime import datetime, timedelta
-from fastauth.const_data import CookieData
-from fastauth.jwts.helpers import validate_secret_key
-from fastauth.libtypes import JWT, UserInfo, FallbackSecrets
+from autheon.const_data import CookieData
+from autheon.jwts.helpers import validate_secret_key
+from autheon.libtypes import JWT, UserInfo, FallbackSecrets
 from typing import Optional, Final
 from datetime import datetime
 

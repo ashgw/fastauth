@@ -4,7 +4,7 @@ from typing import Callable, Awaitable, final
 
 from starlette.requests import Request
 
-from fastauth.csrf import CSRFValidationFilter
+from autheon.csrf import CSRFValidationFilter
 from starlette.responses import Response
 from starlette.middleware.base import BaseHTTPMiddleware
 

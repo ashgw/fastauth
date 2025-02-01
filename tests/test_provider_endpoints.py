@@ -1,5 +1,5 @@
 import validators  # type: ignore
-from fastauth.const_data import OAuthURLs
+from autheon.const_data import OAuthURLs
 
 
 def test_urls() -> None:

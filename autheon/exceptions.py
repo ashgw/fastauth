@@ -1,4 +1,4 @@
-from fastauth.libtypes import ProviderResponse
+from autheon.libtypes import ProviderResponse
 from pydantic import ValidationError
 from jose.exceptions import JOSEError
 

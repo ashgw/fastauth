@@ -9,10 +9,10 @@ from os import urandom
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastauth.libtypes import FallbackSecrets, CSRFToken
-from fastauth.const_data import CookieData, StatusCode
-from fastauth.config import AuthConfig
-from fastauth.cookies import Cookies
+from autheon.libtypes import FallbackSecrets, CSRFToken
+from autheon.const_data import CookieData, StatusCode
+from autheon.config import AuthConfig
+from autheon.cookies import Cookies
 from typing import ClassVar, Optional, final
 
 logger = logging.getLogger("autheon.adapters.fastapi.csrf")

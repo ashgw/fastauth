@@ -5,14 +5,14 @@ from jose.exceptions import JOSEError
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastauth.adapters.use_response import use_response
-from fastauth.libtypes import JWT, ViewableJWT
-from fastauth.const_data import CookieData
-from fastauth.libtypes import FallbackSecrets
-from fastauth.cookies import Cookies
-from fastauth.jwts.operations import decipher_jwt
-from fastauth.const_data import StatusCode
-from fastauth.exceptions import JSONWebTokenTampering
+from autheon.adapters.use_response import use_response
+from autheon.libtypes import JWT, ViewableJWT
+from autheon.const_data import CookieData
+from autheon.libtypes import FallbackSecrets
+from autheon.cookies import Cookies
+from autheon.jwts.operations import decipher_jwt
+from autheon.const_data import StatusCode
+from autheon.exceptions import JSONWebTokenTampering
 
 
 class JWTHandler:

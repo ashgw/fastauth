@@ -11,22 +11,22 @@ from dotenv import load_dotenv
 from os import getenv
 
 
-from fastauth.providers.google.google import Google
-from fastauth.providers.google.schemas import (
+from autheon.providers.google.google import Google
+from autheon.providers.google.schemas import (
     GoogleUserJSONData,
     serialize_user_info,
     serialize_access_token,
 )
 from pydantic import ValidationError
-from fastauth.exceptions import (
+from autheon.exceptions import (
     InvalidUserInfoAccessRequest,
     InvalidTokenAcquisitionRequest,
     SchemaValidationError,
 )
-from fastauth.const_data import StatusCode
-from fastauth.utils import gen_oauth_params
-from fastauth.libtypes import GrantSecurityParams
-from fastauth.config import AuthConfig
+from autheon.const_data import StatusCode
+from autheon.utils import gen_oauth_params
+from autheon.libtypes import GrantSecurityParams
+from autheon.config import AuthConfig
 from .utils import get_method_to_patch
 
 load_dotenv()

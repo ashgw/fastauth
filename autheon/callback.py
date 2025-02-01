@@ -3,17 +3,17 @@ from logging import Logger
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastauth.providers.base import Provider
-from fastauth.const_data import CookieData
-from fastauth.cookies import Cookies
-from fastauth.adapters.use_response import use_response
-from fastauth.libtypes import FallbackSecrets, AccessToken
-from fastauth.jwts.operations import encipher_user_info
-from fastauth.signin import SignInCallback, check_signin_signature
-from fastauth.exceptions import InvalidState, CodeVerifierNotFound
-from fastauth.csrf import CSRF
+from autheon.providers.base import Provider
+from autheon.const_data import CookieData
+from autheon.cookies import Cookies
+from autheon.adapters.use_response import use_response
+from autheon.libtypes import FallbackSecrets, AccessToken
+from autheon.jwts.operations import encipher_user_info
+from autheon.signin import SignInCallback, check_signin_signature
+from autheon.exceptions import InvalidState, CodeVerifierNotFound
+from autheon.csrf import CSRF
 
-from fastauth.libtypes import UserInfo
+from autheon.libtypes import UserInfo
 from typing import Optional
 
 

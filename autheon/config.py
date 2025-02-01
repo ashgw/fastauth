@@ -1,7 +1,7 @@
 from __future__ import annotations
 from logging import Logger
 from typing import NamedTuple, ClassVar
-from fastauth.log import logger as flogger
+from autheon.log import logger as flogger
 
 
 class AuthConfig:

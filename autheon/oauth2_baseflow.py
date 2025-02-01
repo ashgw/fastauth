@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Optional
-from fastauth.libtypes import FallbackSecrets
-from fastauth.signin import SignInCallback
-from fastauth.config import AuthConfig
-from fastauth.providers.base import Provider
+from autheon.libtypes import FallbackSecrets
+from autheon.signin import SignInCallback
+from autheon.config import AuthConfig
+from autheon.providers.base import Provider
 
 
 class OAuth2Base(ABC, AuthConfig):
