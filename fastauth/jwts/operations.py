@@ -8,6 +8,7 @@ from fastauth.const_data import CookieData
 from fastauth.jwts.helpers import validate_secret_key
 from fastauth.libtypes import JWT, UserInfo, FallbackSecrets
 from typing import Optional, Final
+from datetime import datetime
 
 JWT_MAX_AGE: Final = CookieData.JWT.max_age
 JWT_ALGORITHM: Final = ALGORITHMS.HS256
@@ -21,7 +22,7 @@ def encipher_user_info(
     fallback_secrets: FallbackSecrets,
     max_age: int = JWT_MAX_AGE,
 ) -> str:
-    now = datetime.utcnow()
+    now = datetime.now()
     e: Optional[JOSEError] = None
     for secret in fallback_secrets:
         key = validate_secret_key(secret)

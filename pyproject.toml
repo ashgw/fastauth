@@ -1,8 +1,8 @@
-[tool.poetry]
+[project]
 name = "fastauth"
 version = "0.0.0"
 description = "OAuth2 3rd party integration libray for your favorite framework"
-authors = ["Ashref Gwader <ashrefgw@proton.me>"]
+authors = [{ name = "Ashref Gwader", email = "oss@ashgw.me" }]
 license = "MIT"
 readme = "README.md"
 classifiers = [
