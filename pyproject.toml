@@ -1,5 +1,5 @@
 [project]
-name = "fastauth"
+name = "autheon"
 version = "0.0.0"
 description = "OAuth2 3rd party integration libray for your favorite framework"
 authors = [{ name = "Ashref Gwader", email = "oss@ashgw.me" }]

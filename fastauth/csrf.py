@@ -15,7 +15,7 @@ from fastauth.config import AuthConfig
 from fastauth.cookies import Cookies
 from typing import ClassVar, Optional, final
 
-logger = logging.getLogger("fastauth.adapters.fastapi.csrf")
+logger = logging.getLogger("autheon.adapters.fastapi.csrf")
 
 
 class CSRF:
