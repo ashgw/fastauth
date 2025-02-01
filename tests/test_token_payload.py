@@ -1,5 +1,5 @@
 import pytest
-from fastauth.libtypes import QueryParams
+from autheon.libtypes import QueryParams
 from .utils import MockProvider
 
 

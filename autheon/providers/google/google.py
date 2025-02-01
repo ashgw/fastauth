@@ -3,20 +3,20 @@ from overrides import override
 from pydantic import ValidationError
 from starlette.responses import RedirectResponse
 
-from fastauth.libtypes import AccessToken
+from autheon.libtypes import AccessToken
 
-from fastauth.providers.google.schemas import (
+from autheon.providers.google.schemas import (
     GoogleUserInfo,
     serialize_user_info,
     serialize_access_token,
 )
-from fastauth.exceptions import (
+from autheon.exceptions import (
     InvalidTokenAcquisitionRequest,
     InvalidUserInfoAccessRequest,
     SchemaValidationError,
 )
-from fastauth.providers.base import Provider
-from fastauth.const_data import OAuthURLs, SUCCESS_STATUS_CODES
+from autheon.providers.base import Provider
+from autheon.const_data import OAuthURLs, SUCCESS_STATUS_CODES
 
 
 @final

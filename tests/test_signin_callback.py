@@ -1,7 +1,7 @@
 import pytest
 
-from fastauth.libtypes import UserInfo
-from fastauth.signin import check_signin_signature
+from autheon.libtypes import UserInfo
+from autheon.signin import check_signin_signature
 
 
 @pytest.mark.asyncio

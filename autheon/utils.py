@@ -1,12 +1,12 @@
 from hashlib import sha256
 from secrets import token_urlsafe
 from base64 import urlsafe_b64encode
-from fastauth.libtypes import GrantSecurityParams, QueryParams
+from autheon.libtypes import GrantSecurityParams, QueryParams
 from typing import Optional
 
 
 def name_cookie(*, name: str) -> str:
-    return "fastauth" + "." + name
+    return "autheon" + "." + name
 
 
 def get_slashless_url(url: str) -> str:  # pragma: no cover  # TODO: test it

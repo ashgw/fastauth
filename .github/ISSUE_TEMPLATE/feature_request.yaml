@@ -1,5 +1,5 @@
 name: Feature request
-description: Wouldn't it be nice if fastauth could ...
+description: Wouldn't it be nice if autheon could ...
 labels: ['⭐ feature']
 body:
   - type: textarea

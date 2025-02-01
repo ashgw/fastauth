@@ -13,17 +13,17 @@ from typing import (
 from httpx import AsyncClient
 from starlette.responses import RedirectResponse
 
-from fastauth.adapters.use_response import use_response
-from fastauth.utils import querify_kwargs
-from fastauth.libtypes import UserInfo, QueryParams, ProviderResponseData, AccessToken
-from fastauth.config import FastAuthConfig
+from autheon.adapters.use_response import use_response
+from autheon.utils import querify_kwargs
+from autheon.libtypes import UserInfo, QueryParams, ProviderResponseData, AccessToken
+from autheon.config import AuthConfig
 
 
 _T = TypeVar("_T")
 _PSpec = ParamSpec("_PSpec")
 
 
-class Provider(ABC, FastAuthConfig):
+class Provider(ABC, AuthConfig):
     """
     you would inherit from this base class to create your own provider
     """

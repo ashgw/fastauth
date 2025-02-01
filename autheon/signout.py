@@ -3,13 +3,13 @@ from typing import List
 
 from starlette.requests import Request
 
-from fastauth.const_data import CookieData, StatusCode
-from fastauth.libtypes import FallbackSecrets
-from fastauth.cookies import Cookies
+from autheon.const_data import CookieData, StatusCode
+from autheon.libtypes import FallbackSecrets
+from autheon.cookies import Cookies
 from fastapi.responses import Response
-from fastauth.adapters.use_response import use_response
-from fastauth.jwts.operations import decipher_jwt
-from fastauth.exceptions import JSONWebTokenTampering
+from autheon.adapters.use_response import use_response
+from autheon.jwts.operations import decipher_jwt
+from autheon.exceptions import JSONWebTokenTampering
 from jose.exceptions import JWTError
 
 

@@ -1,10 +1,10 @@
 from __future__ import annotations
 from logging import Logger
 from typing import NamedTuple, ClassVar
-from fastauth.log import logger as flogger
+from autheon.log import logger as flogger
 
 
-class FastAuthConfig:
+class AuthConfig:
     passed_csrf_validation: ClassVar[bool] = True
     logger: ClassVar[Logger] = flogger
     debug: ClassVar[bool] = True

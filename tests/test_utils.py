@@ -1,12 +1,12 @@
 from uuid import uuid4
-from fastauth import utils
-from fastauth.libtypes import QueryParams
+from autheon import utils
+from autheon.libtypes import QueryParams
 
 
 def test_auth_cookie_name() -> None:
     c_name = uuid4().hex
     result = utils.name_cookie(name=c_name)
-    assert result == "fastauth." + c_name
+    assert result == "autheon." + c_name
 
 
 def test_csrf() -> None:

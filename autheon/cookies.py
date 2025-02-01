@@ -2,7 +2,7 @@ from fastapi.requests import Request
 from fastapi.responses import Response
 
 from typing import Optional, Literal, Dict, final, Final
-from fastauth.utils import name_cookie
+from autheon.utils import name_cookie
 
 
 @final

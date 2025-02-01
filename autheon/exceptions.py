@@ -1,18 +1,18 @@
-from fastauth.libtypes import ProviderResponse
+from autheon.libtypes import ProviderResponse
 from pydantic import ValidationError
 from jose.exceptions import JOSEError
 
 
-class FastAuthError(Exception):
+class AutheonError(Exception):
     """base exc for all"""
 
 
-class WrongKeyLength(FastAuthError):
+class WrongKeyLength(AutheonError):
     def __init__(self) -> None:
         super().__init__("Key length must be exactly 32 bit")
 
 
-class SchemaValidationError(FastAuthError):
+class SchemaValidationError(AutheonError):
     def __init__(
         self,
         *,
@@ -34,7 +34,7 @@ class SchemaValidationError(FastAuthError):
         super().__init__(self.display)
 
 
-class InvalidState(FastAuthError):
+class InvalidState(AutheonError):
     def __init__(self) -> None:
         self.display = (
             "The received state does not match the expected state, possible tampering"
@@ -42,13 +42,13 @@ class InvalidState(FastAuthError):
         super().__init__(self.display)
 
 
-class CodeVerifierNotFound(FastAuthError):
+class CodeVerifierNotFound(AutheonError):
     def __init__(self) -> None:
         self.display = "The code verifier could not be retrieved from the cookie, the user might have deleted the cookie"
         super().__init__(self.display)
 
 
-class InvalidCodeVerifier(FastAuthError):
+class InvalidCodeVerifier(AutheonError):
     def __init__(self) -> None:
         self.display = (
             "The received code verifier does not match the expected code verifier,"
@@ -57,7 +57,7 @@ class InvalidCodeVerifier(FastAuthError):
         super().__init__(self.display)
 
 
-class InvalidTokenAcquisitionRequest(FastAuthError):
+class InvalidTokenAcquisitionRequest(AutheonError):
     def __init__(
         self, *, provider: str, debug: bool, provider_response_data: ProviderResponse
     ) -> None:
@@ -73,7 +73,7 @@ class InvalidTokenAcquisitionRequest(FastAuthError):
         super().__init__(self.display)
 
 
-class InvalidUserInfoAccessRequest(FastAuthError):
+class InvalidUserInfoAccessRequest(AutheonError):
     def __init__(
         self, *, provider: str, debug: bool, provider_response_data: ProviderResponse
     ) -> None:
@@ -88,7 +88,7 @@ class InvalidUserInfoAccessRequest(FastAuthError):
         super().__init__(self.display)
 
 
-class JSONWebTokenTampering(FastAuthError):
+class JSONWebTokenTampering(AutheonError):
     def __init__(
         self,
         *,

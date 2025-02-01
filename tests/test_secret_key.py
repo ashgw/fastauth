@@ -1,7 +1,7 @@
 import pytest
 from string import ascii_letters, digits
-from fastauth.jwts.helpers import generate_secret, validate_secret_key
-from fastauth.exceptions import WrongKeyLength
+from autheon.jwts.helpers import generate_secret, validate_secret_key
+from autheon.exceptions import WrongKeyLength
 
 
 def test_generate_secret() -> None:

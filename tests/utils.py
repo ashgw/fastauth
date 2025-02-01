@@ -2,8 +2,8 @@ from typing import Optional
 
 from starlette.responses import RedirectResponse
 
-from fastauth.libtypes import UserInfo, AccessToken
-from fastauth.providers.base import Provider
+from autheon.libtypes import UserInfo, AccessToken
+from autheon.providers.base import Provider
 
 
 def get_method_to_patch(*, patched_class: object, method_name: str) -> str:

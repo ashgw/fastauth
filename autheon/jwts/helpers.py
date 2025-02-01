@@ -1,5 +1,5 @@
 from os import urandom
-from fastauth.exceptions import WrongKeyLength
+from autheon.exceptions import WrongKeyLength
 
 
 def generate_secret() -> str:

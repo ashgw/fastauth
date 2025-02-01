@@ -4,13 +4,13 @@ from logging import Logger
 
 from fastapi import APIRouter
 
-from fastauth.providers.base import Provider
-from fastauth.libtypes import FallbackSecrets
-from fastauth.signin import SignInCallback
-from fastauth.const_data import CookieData
-from fastauth.adapters.fastapi.flow import FastAPIOAuthFlow as FastAPIOAuth2
-from fastauth.log import logger as flogger
-from fastauth.config import FastAuthConfig
+from autheon.providers.base import Provider
+from autheon.libtypes import FallbackSecrets
+from autheon.signin import SignInCallback
+from autheon.const_data import CookieData
+from autheon.adapters.fastapi.flow import FastAPIOAuthFlow as FastAPIOAuth2
+from autheon.log import logger as flogger
+from autheon.config import AuthConfig
 
 
 def OAuthOptions(
@@ -29,7 +29,7 @@ def OAuthOptions(
     debug: bool = True,
     logger: Logger = flogger,
 ) -> APIRouter:
-    FastAuthConfig.set_defaults(debug=debug, logger=logger)
+    AuthConfig.set_defaults(debug=debug, logger=logger)
     auth = FastAPIOAuth2(
         provider=provider,
         fallback_secrets=fallback_secrets,

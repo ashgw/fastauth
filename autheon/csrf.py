@@ -9,13 +9,13 @@ from os import urandom
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastauth.libtypes import FallbackSecrets, CSRFToken
-from fastauth.const_data import CookieData, StatusCode
-from fastauth.config import FastAuthConfig
-from fastauth.cookies import Cookies
+from autheon.libtypes import FallbackSecrets, CSRFToken
+from autheon.const_data import CookieData, StatusCode
+from autheon.config import AuthConfig
+from autheon.cookies import Cookies
 from typing import ClassVar, Optional, final
 
-logger = logging.getLogger("fastauth.adapters.fastapi.csrf")
+logger = logging.getLogger("autheon.adapters.fastapi.csrf")
 
 
 class CSRF:
@@ -76,7 +76,7 @@ class CSRF:
 
 
 @final
-class CSRFValidationFilter(CSRF, FastAuthConfig):
+class CSRFValidationFilter(CSRF, AuthConfig):
     def __init__(self, request: Request, response: Response) -> None:
         self.request = request
         self.response = response

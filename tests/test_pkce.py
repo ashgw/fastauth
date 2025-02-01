@@ -1,7 +1,7 @@
 import pytest
 
-from fastauth.utils import gen_oauth_params
-from fastauth.libtypes import GrantSecurityParams
+from autheon.utils import gen_oauth_params
+from autheon.libtypes import GrantSecurityParams
 from hashlib import sha256
 from base64 import urlsafe_b64encode
 
