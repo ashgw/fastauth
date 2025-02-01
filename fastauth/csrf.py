@@ -11,7 +11,7 @@ from starlette.responses import Response
 
 from fastauth.libtypes import FallbackSecrets, CSRFToken
 from fastauth.const_data import CookieData, StatusCode
-from fastauth.config import FastAuthConfig
+from fastauth.config import AuthConfig
 from fastauth.cookies import Cookies
 from typing import ClassVar, Optional, final
 
@@ -76,7 +76,7 @@ class CSRF:
 
 
 @final
-class CSRFValidationFilter(CSRF, FastAuthConfig):
+class CSRFValidationFilter(CSRF, AuthConfig):
     def __init__(self, request: Request, response: Response) -> None:
         self.request = request
         self.response = response

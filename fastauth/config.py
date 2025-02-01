@@ -4,7 +4,7 @@ from typing import NamedTuple, ClassVar
 from fastauth.log import logger as flogger
 
 
-class FastAuthConfig:
+class AuthConfig:
     passed_csrf_validation: ClassVar[bool] = True
     logger: ClassVar[Logger] = flogger
     debug: ClassVar[bool] = True

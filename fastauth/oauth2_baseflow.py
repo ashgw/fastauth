@@ -2,11 +2,11 @@ from abc import ABC, abstractmethod
 from typing import Optional
 from fastauth.libtypes import FallbackSecrets
 from fastauth.signin import SignInCallback
-from fastauth.config import FastAuthConfig
+from fastauth.config import AuthConfig
 from fastauth.providers.base import Provider
 
 
-class OAuth2Base(ABC, FastAuthConfig):
+class OAuth2Base(ABC, AuthConfig):
     def __init__(
         self,
         *,

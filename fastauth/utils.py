@@ -6,7 +6,7 @@ from typing import Optional
 
 
 def name_cookie(*, name: str) -> str:
-    return "fastauth" + "." + name
+    return "autheon" + "." + name
 
 
 def get_slashless_url(url: str) -> str:  # pragma: no cover  # TODO: test it

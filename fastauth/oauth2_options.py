@@ -10,7 +10,7 @@ from fastauth.signin import SignInCallback
 from fastauth.const_data import CookieData
 from fastauth.adapters.fastapi.flow import FastAPIOAuthFlow as FastAPIOAuth2
 from fastauth.log import logger as flogger
-from fastauth.config import FastAuthConfig
+from fastauth.config import AuthConfig
 
 
 def OAuthOptions(
@@ -29,7 +29,7 @@ def OAuthOptions(
     debug: bool = True,
     logger: Logger = flogger,
 ) -> APIRouter:
-    FastAuthConfig.set_defaults(debug=debug, logger=logger)
+    AuthConfig.set_defaults(debug=debug, logger=logger)
     auth = FastAPIOAuth2(
         provider=provider,
         fallback_secrets=fallback_secrets,
